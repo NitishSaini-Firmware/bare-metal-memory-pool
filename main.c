@@ -49,7 +49,7 @@ void *my_malloc(size_t datasize)
             return (void *)&mem_manager.memoryPool[i * BLOCK_SIZE];
         }
     }
-
+    EXIT_CRITICAL();
     return NULL;
 }
 
